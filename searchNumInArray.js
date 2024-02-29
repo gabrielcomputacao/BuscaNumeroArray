@@ -2,7 +2,7 @@ export function findNumberTarget(array, target) {
 
 
 
-    return -1
+    return 0
 
 
 }

@@ -7,7 +7,7 @@ describe('Search Number in Array', () => {
 
     it('should find number in array', () => {
 
-        const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        const nums = [17, 22, 33, 2, 45, 66, 21, 25]
         const target = 2
         const index = 1
 
@@ -18,9 +18,9 @@ describe('Search Number in Array', () => {
 
     })
 
-    it('should not find number in array', () => {
+    it('should not find number in array and receive -1', () => {
 
-        const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        const nums = [17, 22, 33, 2, 45, 66, 21, 25]
         const target = 13
 
         const result = findNumberTarget(nums, target)
@@ -28,6 +28,16 @@ describe('Search Number in Array', () => {
 
         expect(result).toBe(-1)
 
+    })
+
+    it('should receive zero if the array is empty', () => {
+        const nums = []
+        const target = 13
+
+        const result = findNumberTarget(nums, target)
+
+
+        expect(result).toBe(-1)
     })
 
 })

@@ -1,43 +1,33 @@
 import {
     findNumberTarget
-} from './searchNumInArray'
+} from "./searchNumInArray";
 
+describe("Search Number in Array", () => {
+    it("should find number in array", () => {
+        const nums = [-2, 5, 7, 22, 33, 44, 55, 66, 77, 99, 104];
+        const target = 55;
+        const index = 6;
 
-describe('Search Number in Array', () => {
+        const result = findNumberTarget(nums, target);
 
-    it('should find number in array', () => {
+        expect(result).toBe(index);
+    });
 
-        const nums = [17, 22, 33, 2, 45, 66, 21, 25]
-        const target = 2
-        const index = 1
+    it("should not find number in array and receive -1", () => {
+        const nums = [-2, 5, 7, 22, 33, 44, 55, 66, 77, 99, 104];
+        const target = 13;
 
-        const result = findNumberTarget(nums, target)
+        const result = findNumberTarget(nums, target);
 
+        expect(result).toBe(-1);
+    });
 
-        expect(result).toBe(index)
+    it("should receive zero if the array is empty", () => {
+        const nums = [];
+        const target = 13;
 
-    })
+        const result = findNumberTarget(nums, target);
 
-    it('should not find number in array and receive -1', () => {
-
-        const nums = [17, 22, 33, 2, 45, 66, 21, 25]
-        const target = 13
-
-        const result = findNumberTarget(nums, target)
-
-
-        expect(result).toBe(-1)
-
-    })
-
-    it('should receive zero if the array is empty', () => {
-        const nums = []
-        const target = 13
-
-        const result = findNumberTarget(nums, target)
-
-
-        expect(result).toBe(-1)
-    })
-
-})
+        expect(result).toBe(0);
+    });
+});

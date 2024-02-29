@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "busca em array",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "jest --watchAll"
   },
